@@ -1,0 +1,69 @@
+﻿<Window x:Class="SPAMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPAMS"
+        mc:Ignorable="d"
+        Title="SPA MANAGEMENT SYSTEM" Height="951.46" Width="948.6" ResizeMode="NoResize" Icon="spa_logo_5kY_icon.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="spa logo.png" Stretch="Uniform"/>
+    </Window.Background>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="653*"/>
+            <ColumnDefinition Width="289*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid HorizontalAlignment="Left" Height="247" VerticalAlignment="Top" Width="309"/>
+        <DataGrid HorizontalAlignment="Left" Height="232" VerticalAlignment="Top" Width="309" Margin="314,0,0,0"/>
+        <DataGrid HorizontalAlignment="Left" Height="493" VerticalAlignment="Top" Width="309" Margin="628,0,0,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textname" HorizontalAlignment="Left" Height="23" Margin="99,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="textname" />
+        <TextBox x:Name="textid" HorizontalAlignment="Left" Height="23" Margin="99,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  AutomationProperties.Name="textid"/>
+        <TextBox x:Name="textphone" HorizontalAlignment="Left" Height="23" Margin="99,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  AutomationProperties.Name="textphone"/>
+        <Label Content="name&#xD;&#xA;" HorizontalAlignment="Left" Margin="56,78,0,0" VerticalAlignment="Top"/>
+        <Label Content="id&#xA;" HorizontalAlignment="Left" Margin="56,106,0,0" VerticalAlignment="Top"/>
+        <Label Content="phone&#xD;&#xA;" HorizontalAlignment="Left" Margin="49,130,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.223,0.505"/>
+        <Button Content="add new member" HorizontalAlignment="Left" Margin="99,198,0,0" VerticalAlignment="Top" Width="120" Height="35" Click="Button_Click_1"/>
+        <Button Content="find" HorizontalAlignment="Left" Margin="487,95,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click" Height="48"/>
+        <Label Content="search" HorizontalAlignment="Left" Margin="454,34,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="find_text" HorizontalAlignment="Left" Height="23" Margin="374,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" TextChanged="find_text_TextChanged"/>
+        <DataGrid HorizontalAlignment="Left" Height="242" VerticalAlignment="Top" Width="309" Margin="0,249,0,0"/>
+        <ListView x:Name="listviewshow" Height="424" Margin="0,498,0,-0.4" VerticalAlignment="Top" Width="942" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="identity" HorizontalAlignment="Left" Height="23" Margin="73.8,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="value_of_change" HorizontalAlignment="Left" Height="23" Margin="73.8,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button Content="modify" HorizontalAlignment="Left" Margin="73.8,340,0,0" VerticalAlignment="Top" Width="120" Height="29" Click="Button_Click_2" Grid.Column="1"/>
+        <Label Content="name or id" HorizontalAlignment="Left" Margin="102.8,80,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="value" HorizontalAlignment="Left" Margin="113.8,264,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="type of change&#xD;&#xA;" HorizontalAlignment="Left" Margin="90.8,134,0,0" VerticalAlignment="Top" Height="38" Grid.Column="1"/>
+        <CheckBox x:Name="ckname" Content="name" HorizontalAlignment="Left" Margin="90.8,172,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <CheckBox x:Name="ckid" Content="id" HorizontalAlignment="Left" Margin="90.8,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.063,0.329" Grid.Column="1"/>
+        <CheckBox x:Name="ckpoints" Content="points" HorizontalAlignment="Left" Margin="90.8,212,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <CheckBox x:Name="cknumber" Content="numper" HorizontalAlignment="Left" Margin="90.8,232,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="delete user" HorizontalAlignment="Left" Margin="314,95,0,0" VerticalAlignment="Top" Width="144" Height="48" Click="Button_Click_3"/>
+        <TextBox x:Name="fieldtext_" HorizontalAlignment="Left" Height="23" Margin="99,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="field" HorizontalAlignment="Left" Margin="49,162,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="ckfield" Content="field" Grid.Column="1" HorizontalAlignment="Left" Margin="180.4,172,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="261" Margin="315,232,0,0" VerticalAlignment="Top" Width="308" Source="spa logo.png"/>
+        <GroupBox Header="waiting list" HorizontalAlignment="Left" Height="199" Margin="10,270,0,0" VerticalAlignment="Top" Width="254">
+            <Button Content="add new member to waiting list" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="186" Height="39" Click="Button_Click_4"/>
+        </GroupBox>
+        <TextBox x:Name="textname_Copy" HorizontalAlignment="Left" Height="23" Margin="60,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="textname" />
+        <TextBox x:Name="textid_Copy" HorizontalAlignment="Left" Height="23" Margin="60,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  AutomationProperties.Name="textid"/>
+        <TextBox x:Name="textphone_Copy" HorizontalAlignment="Left" Height="23" Margin="60,352,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  AutomationProperties.Name="textphone"/>
+        <Label Content="name&#xA;" HorizontalAlignment="Left" Margin="17,295,0,0" VerticalAlignment="Top"/>
+        <Label Content="id&#xA;" HorizontalAlignment="Left" Margin="17,323,0,0" VerticalAlignment="Top"/>
+        <Label Content="phone&#xA;" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.223,0.505"/>
+        <TextBox x:Name="fieldtext__Copy" HorizontalAlignment="Left" Height="23" Margin="60,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="field" HorizontalAlignment="Left" Margin="10,379,0,0" VerticalAlignment="Top"/>
+        <Button Content="find in waitng" HorizontalAlignment="Left" Margin="495,150,0,0" VerticalAlignment="Top" Width="126" Height="37" Click="Button_Click_5"/>
+        <Button Content="modify in waitng" Grid.Column="1" HorizontalAlignment="Left" Margin="73.4,385,0,0" VerticalAlignment="Top" Width="120" Height="38" Click="Button_Click_6"/>
+        <Button Content="delete from waiting" HorizontalAlignment="Left" Margin="315,150,0,0" VerticalAlignment="Top" Width="143" Height="38" Click="Button_Click_7"/>
+
+    </Grid>
+</Window>
